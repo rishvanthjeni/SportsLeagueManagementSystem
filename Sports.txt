@@ -1,0 +1,216 @@
+import java.util.InputMismatchException;
+import java.util.Scanner;
+class Batsman {
+    String name;
+    boolean isOut;
+    Batsman left, right;
+
+    public Batsman(String name, boolean isOut) {
+        this.name = name;
+        this.isOut = isOut;
+        this.left = null;
+        this.right = null;
+    }
+}
+public class Main
+{
+    public static void inorderTraversal(Batsman b) {
+        if (b != null) {
+            inorderTraversal(b.left);
+            System.out.println("Batsman: " + b.name + " | Status: " + (b.isOut ? "Out" : "Not Out"));
+            inorderTraversal(b.right);
+        }
+    }
+    public static void main(String[]args){
+        Scanner sc=new Scanner(System.in);
+        System.out.println("EGS WOMENS CRICKET LEAGUE..!");
+        System.out.println("Can You Show All the Teams?");
+        System.out.println("Team:Yes or No");
+        String Team=sc.nextLine();
+        String Yes="Yes";
+        if(Yes.equals("Yes"))
+        {
+            System.out.println(" 1.CSBS Girls \n 2.ECE Girls \n 3.AIDS Girls \n 4.IT Girls \n 5.CSE Girls");
+        }
+        String members=sc.nextLine();
+        switch(members){
+            case "1":
+                System.out.println(" 01. Name: Jeni  Dept: CSBS  Jersey: 08 \n 02. Name: Rini  Dept: CSBS  Jersey: 07 \n 03. Name: Jenifar  Dept: CSBS  Jersey: 11 \n 04. Name: Sri  Dept: CSBS  Jersey: 77 \n 05. Name: Priya  Dept: CSBS  Jersey: 43 \n 06. Name: Sofi  Dept: CSBS  Jersey: 56 \n 07. Name: Mahi  Dept: CSBS  Jersey: 05 \n 08. Name: hema  Dept: CSBS  Jersey: 01 \n 09. Name: sowmi  Dept: CSBS  Jersey: 15 \n 10. Name: Niha  Dept: CSBS  Jersey: 23 \n 11. Name: Ani  Dept: CSBS  Jersey: 51");
+                break;
+            case "2":
+                System.out.println(" 01. Name: Abi  Dept: ECE  Jersey: 08 \n 02. Name: Anu  Dept: ECE  Jersey: 07 \n 03. Name: Suja  Dept: ECE  Jersey: 11 \n 04. Name: Subi  Dept: ECE  Jersey: 77 \n 05. Name: Qr  Dept: ECE  Jersey: 43 \n 06. Name: Pq  Dept: ECE  Jersey: 56 \n 07. Name: Op  Dept: ECE  Jersey: 05 \n 08. Name: No  Dept: ECE  Jersey: 01 \n 09. Name: Mn  Dept: ECE  Jersey: 15 \n 10. Name: Mn  Dept: ECE  Jersey: 23 \n 11. Name: Lm  Dept: ECE  Jersey: 51");
+                break;
+            case "3":
+                System.out.println(" 01. Name: Ab  Dept: AIDS  Jersey: 08 \n 02. Name: Bc  Dept: AIDS  Jersey: 07 \n 03. Name: Cd  Dept: AIDS  Jersey: 11 \n 04. Name: De  Dept: AIDS  Jersey: 77 \n 05. Name: Ef  Dept: AIDS  Jersey: 43 \n 06. Name: Fg  Dept: AIDS  Jersey: 56 \n 07. Name: Gh  Dept: AIDS  Jersey: 05 \n 08. Name: Hi  Dept: AIDS  Jersey: 01 \n 09. Name: Ij  Dept: AIDS  Jersey: 15 \n 10. Name: Jk  Dept: AIDS  Jersey: 23 \n 11. Name: Kl  Dept: AIDS  Jersey: 51");
+                break;
+            case "4":
+                System.out.println(" 01. Name: Abc  Dept: IT  Jersey: 08 \n 02. Name: Def  Dept: IT  Jersey: 07 \n 03. Name: ghi  Dept: IT  Jersey: 11 \n 04. Name: Hii  Dept: IT  Jersey: 77 \n 05. Name: hlo  Dept: IT  Jersey: 43 \n 06. Name: Yep  Dept: IT  Jersey: 56 \n 07. Name: Mah  Dept: IT  Jersey: 05 \n 08. Name: Muu  Dept: IT  Jersey: 01 \n 09. Name: Bhuvi  Dept: IT  Jersey: 15 \n 10. Name: Shee  Dept: IT  Jersey: 23 \n 11. Name: Hello  Dept: IT  Jersey: 51");
+                break;
+            case "5":
+                System.out.println(" 01. Name: Anii  Dept: CSE  Jersey: 08 \n 02. Name: Mht  Dept: CSE  Jersey: 07 \n 03. Name: Jenifarey  Dept: CSE  Jersey: 11 \n 04. Name: Sriii  Dept: CSE  Jersey: 77 \n 05. Name: Jaya  Dept: CSE  Jersey: 43 \n 06. Name: Sobi  Dept: CSE  Jersey: 56 \n 07. Name: Maya  Dept: CSE  Jersey: 05 \n 08. Name: hemu  Dept: CSE  Jersey: 01 \n 09. Name: sowmiya  Dept: CSE  Jersey: 15 \n 10. Name: Niki  Dept: CSE  Jersey: 23 \n 11. Name: Anitha  Dept: CSE  Jersey: 51");
+                break;    
+            default:
+                System.out.println(" Exit");
+        } 
+        int date = 0;
+        try {
+        System.out.println("Enter the Date: (12 / 13 / 14)");
+        date = sc.nextInt();
+        } 
+        catch (InputMismatchException e) {
+        System.out.println("Invalid Date...Please Enter a Valid Integer Date.");
+        sc.next(); 
+        }
+        sc.nextLine();
+        System.out.println("Catch the Match Schedule Below!!");
+        if(date==12){
+        System.out.println(" Schedule for 12th May----------------------------------------------");
+        
+        System.out.println(" Match:CSBS Vs ECE | Date:12th May 2025 | Time:9:00 AM | Venue:EGS Play Ground ");
+        System.out.println(" Match:AIDS Vs IT | Date:12th May 2025 | Time:1:00 PM | Venue:EGS Play Ground ");
+        System.out.println(" Match:CSE Vs CSBS | Date:12th May 2025 | Time:4:00 PM | Venue:EGS Play Ground ");
+        }
+        else if(date==13)
+        {
+        System.out.println(" Schedule for 113th May----------------------------------------------");
+        
+        System.out.println(" Match:AIDS Vs ECE | Date:13th May 2025 | Time:9:00 AM | Venue:EGS Play Ground ");
+        System.out.println(" Match:CSE Vs IT | Date:13th May 2025 | Time:1:00 AM | Venue:EGS Play Ground ");
+        System.out.println(" Match:CSBS Vs AIDS | Date:13th May 2025 | Time:4:00 AM | Venue:EGS Play Ground ");
+        }
+        else if(date==14){
+        System.out.println(" Schedule for 14th May----------------------------------------------");
+        
+        System.out.println(" Match:IT Vs ECE | Date:12th May 2025 | Time:9:00 AM | Venue:EGS Play Ground ");
+        System.out.println(" Match:AIDS Vs CSE | Date:12th May 2025 | Time:1:00 PM | Venue:EGS Play Ground ");
+        System.out.println(" Match:CSBS Vs IT | Date:12th May 2025 | Time:4:00 PM | Venue:EGS Play Ground ");
+        System.out.println(" Match:CSE Vs ECE | Date:12th May 2025 | Time:7:00 PM | Venue:EGS Play Ground ");
+        }
+        else{
+            System.out.println("No Matches on that day");
+        }
+        System.out.println("Do you want to see CSBS batsman status? (Yes/No)");
+        String viewStatus = sc.nextLine();
+        System.out.println("Which team  batsman status do you want to see? (CSBS/ECE/AIDS/IT/CSE):");
+        String teamChoice = sc.nextLine().toUpperCase();
+
+        switch (teamChoice) {
+            case "CSBS":
+                Batsman csbs = new Batsman("Jeni", false);
+                csbs.left = new Batsman("Rini", true);
+                csbs.right = new Batsman("Jenifar", false);
+                csbs.left.left = new Batsman("Sri", true);
+                csbs.left.right = new Batsman("Priya", false);
+                csbs.right.left = new Batsman("Sofi", true);
+                csbs.right.right = new Batsman("Mahi", false);
+                System.out.println("CSBS Team Batsman Status:");
+                inorderTraversal(csbs);
+                break;
+
+            case "ECE":
+                Batsman ece = new Batsman("Abi", false);
+                ece.left = new Batsman("Anu", true);
+                ece.right = new Batsman("Suja", false);
+                ece.left.left = new Batsman("Subi", true);
+                ece.left.right = new Batsman("Qr", false);
+                ece.right.left = new Batsman("Pq", true);
+                ece.right.right = new Batsman("Op", false);
+                System.out.println("ECE Team Batsman Status:");
+                inorderTraversal(ece);
+                break;
+
+            case "AIDS":
+                Batsman aids = new Batsman("Ab", false);
+                aids.left = new Batsman("Bc", true);
+                aids.right = new Batsman("Cd", false);
+                aids.left.left = new Batsman("De", true);
+                aids.left.right = new Batsman("Ef", false);
+                aids.right.left = new Batsman("Fg", true);
+                aids.right.right = new Batsman("Gh", false);
+                System.out.println("AIDS Team Batsman Status:");
+                inorderTraversal(aids);
+                break;
+
+            case "IT":
+                Batsman it = new Batsman("Abc", false);
+                it.left = new Batsman("Def", true);
+                it.right = new Batsman("ghi", false);
+                it.left.left = new Batsman("Hii", true);
+                it.left.right = new Batsman("hlo", false);
+                it.right.left = new Batsman("Yep", true);
+                it.right.right = new Batsman("Mah", false);
+                System.out.println("IT Team Batsman Status:");
+                inorderTraversal(it);
+                break;
+
+            case "CSE":
+                Batsman cse = new Batsman("Anii", false);
+                cse.left = new Batsman("Mht", true);
+                cse.right = new Batsman("Jenifarey", false);
+                cse.left.left = new Batsman("Sriii", true);
+                cse.left.right = new Batsman("Jaya", false);
+                cse.right.left = new Batsman("Sobi", true);
+                cse.right.right = new Batsman("Maya", false);
+                System.out.println("CSE Team Batsman Status:");
+                inorderTraversal(cse);
+                break;
+
+            default:
+                System.out.println("Invalid team selection.");
+        }
+
+        System.out.println();
+        
+        System.out.println("Show Points Table!");
+        System.out.println("Teams: (CSBS / ECE / AIDS / IT / CSE)");
+        String T = sc.nextLine().toUpperCase();  
+ 
+        System.out.println("Match No (1-10):");
+        int M = sc.nextInt();
+        sc.nextLine();  
+ 
+        System.out.println("Win (Yes / Tie / No):");
+        String Win = sc.nextLine().trim();  
+
+        if (Win.equalsIgnoreCase("Yes")) {
+            System.out.println("The Team Got 2 Points");
+        } 
+        else if (Win.equalsIgnoreCase("Tie")) {
+            System.out.println("The Team Got 1 Point");
+        } 
+        else {
+            System.out.println("The Team Got 0 Points");
+        }
+ 
+        System.out.println("Loss (Yes / Tie / No):");
+        String Loss = sc.nextLine().trim();
+
+        if (Loss.equalsIgnoreCase("Yes")) {
+            System.out.println("The Team Got 0 Points");
+        } 
+        else if (Loss.equalsIgnoreCase("Tie")) {
+            System.out.println("The Team Got 1 Point");
+        }
+        else {
+            System.out.println("The Team Got 2 Points");
+        }
+                System.out.println("Battle Winner Point : (2 / 1 / 0)");
+                int points=sc.nextInt();
+                 if(points==2)
+                {
+                    System.out.println("The Team Won the Match");
+                }
+                else if(points==1){
+                    System.out.println("The Match is Draw");
+                }
+                else if(points==0){
+                    System.out.println("The Team Loss the Match");
+                }
+    }
+}
+
+
+
+//Here I used the concept such as:
+//Inorder Binary Search
+//Exception handling
